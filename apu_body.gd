@@ -7,6 +7,8 @@ var velocidad = Vector2() # velocidad en lo que se mueve en el momento actual
 enum estados {quieto , caminando} #almaceno los estados y lo apunto en el codigo 
 var estado_actual = estados # asigno a estados a estado_actual (la verdad creo que no sirve pero bueno lo dejo ahi)
 var screen_size #para la pantalla pero no logro hacerlo funcionar para que en ventana me lo muestre como en pantalla completa
+signal hit #Cada vez que el apu tenga contacto con algún enemigo se emite la señal de que fue golpeado
+signal bonus #
 
 
 func _ready():
@@ -76,6 +78,12 @@ func _physics_process(delta):
 	
 	var movimiento = velocidad # asigno velocidad al movimiento
 	move_and_slide(movimiento) #mueve en base a la velocidad asignada
+	
+	#los enemigos van a estar en un Area2D, a los que se nombrarán Mob. 
+	#Cuando se choque con alguno emitira el signal hit
+	var colision = move_and_collide(velocidad*delta)
+	if colision and colision.collider.name=="Mob":
+		emit_signal("hit")
 
 # para procesar el movimiento segun la direccion y si se encuentra quieto
 func procesar_movimiento():
@@ -87,14 +95,3 @@ func procesar_movimiento():
 	if(estado_actual == estados.quieto):
 		velocidad.x = 0
 	
-
-
-
-
-
-
-
-
-
-
-
