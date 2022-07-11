@@ -22,8 +22,8 @@
                             "epg_id": "",
                             "options": [
                             {
-                                "format": "m3u",
-                                "url": "http://localhost:3000/downloads/Magic_Kids.m3u",
+                                "format": "m3u8",
+                                "url": "https://magicstream.ddns.net:443/magicstream/stream.m3u8",
                                 "geo2": null,
                                 "res": null,
                                 "lang": null
