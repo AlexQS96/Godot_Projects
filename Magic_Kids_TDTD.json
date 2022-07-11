@@ -1,0 +1,40 @@
+{
+    "license": {
+        "source": "https://github.com/LaQuay/TDTChannels",
+        "url": "https://github.com/LaQuay/TDTChannels/blob/master/LICENSE"
+    },
+        "epg": {
+        "xml": "https://www.tdtchannels.com/epg/TV.xml",
+        "xml.gz": "https://www.tdtchannels.com/epg/TV.xml.gz",
+        "json": "https://www.tdtchannels.com/epg/TV.json"
+    },
+    "countries": [
+        {
+            "name": "Argentina",
+            "ambits": [
+                {
+                    "name": "Entretenimiento",
+                    "channels": [
+                        {
+                            "name": "Magic Kids",
+                            "web": "https://magicstream.netlify.app",
+                            "logo": "https://magicstream.netlify.app/img/magickidsbg.png",
+                            "epg_id": "1337360",
+                            "options": [
+                            {
+                                "format": "m3u8",
+                                "url": "https://magicstream.ddns.net:443/magicstream/stream.m3u8",
+                                "geo2": null,
+                                "res": null,
+                                "lang": null
+                            }
+                            ],
+                            "extra_info": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "updated": 10000
+}
