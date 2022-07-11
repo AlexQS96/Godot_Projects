@@ -1,0 +1,39 @@
+{
+    "license": {
+      "source": "someSource",
+      "url": "https://someSource.com"
+    },
+    "epg": {
+      "xml": "",
+      "xml.gz": "",
+      "json": ""
+    },
+    "countries": [
+        {
+            "name": "Argentina",
+            "ambits": [
+                {
+                    "name": "Generalistas",
+                    "channels": [
+                        {
+                            "name": "Magic Kids",
+                            "web": "https://magicstream.netlify.app",
+                            "logo": "https://magicstream.netlify.app/img/magickidsbg.png",
+                            "epg_id": "",
+                            "options": [
+                            {
+                                "format": "m3u",
+                                "url": "http://localhost:3000/downloads/Magic_Kids.m3u",
+                                "geo2": null,
+                                "res": null,
+                                "lang": null
+                            }
+                            ],
+                            "extra_info": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
